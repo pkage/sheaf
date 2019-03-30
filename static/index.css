@@ -1,0 +1,48 @@
+body {
+	margin: 0;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	background-color: #222222;
+	color: white;
+	height: 100vh;
+}
+
+.form-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.button {
+	color: white;
+	margin: 2px;
+
+	opacity: 0.7;
+	transition: opacity 0.25s cubic-bezier(0,0,0.3,1);
+}
+
+.button:hover {
+	opacity: 1;
+}
+
+.urlbar {
+	background: none;
+	border: 0;
+	border-bottom: 1px solid white;
+	opacity: 0.7;
+	transition: opacity 0.25s cubic-bezier(0,0,0.3,1);
+	outline: none;
+	color: white;
+	font-size: inherit;
+	margin: 5px;
+
+	font-family: "Hack", monospace;
+	width: 60vw;
+
+
+}
