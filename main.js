@@ -8,6 +8,7 @@ const {
 } = require('electron')
 const validUrl = require('valid-url')
 const { exec } = require('child_process')
+const path     = require('path')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -18,8 +19,11 @@ function createWindow () {
 	// Create the browser window.
 	mainWindow = new BrowserWindow({
 		webPreferences: {
-			nodeIntegration: true
+			nodeIntegration: false,
+			sandbox: true,
+			preload: path.join(__dirname, 'renderer.js')
 		},
+
 		frame: false
 	})
 
